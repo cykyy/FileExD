@@ -23,7 +23,7 @@ public class Start {
         boolean choice = true;
 
         while (choice) {
-            System.out.println("Welcome to IFM Downloader! This tool simply download files/folders recursively from index based file manager sites. \nCurrently it supports H5ai and Fancyindex based sites. But the tool is upgradable and any contribution is always welcome. Thanks.");
+            System.out.println("Welcome to FilExD! This tool simply download files/folders recursively from index based file manager sites. \nCurrently it supports H5ai and Fancyindex based sites. But the tool is upgradable and any contribution is always welcome. Thanks.");
             System.out.println();
             System.out.println("Choose from the Following Options: ");
             System.out.println("--------------------------------------");
