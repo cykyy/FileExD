@@ -17,6 +17,7 @@ public class Download {
     }
 
     public void downloadFileFromUrlUsingNio() {
+        FileReadWrite frw = new FileReadWrite();
         URL urlObj = null;
         ReadableByteChannel rbcObj = null;
         FileOutputStream fOutStream  = null;
@@ -24,6 +25,8 @@ public class Download {
         // Checking If The File Exists At The Specified Location Or Not
         Path filePathObj = Paths.get(address);
         boolean fileExists = Files.exists(filePathObj);
+        //log saving
+        frw.writeInFile(address+" ::: "+url,"./History/failed_download.txt", true);
         if(fileExists) {
             try {
                 urlObj = new URL(url);
@@ -33,6 +36,9 @@ public class Download {
 
                 fOutStream.getChannel().transferFrom(rbcObj, 0, Long.MAX_VALUE);
                 System.out.println("! File Successfully Downloaded From The Url !");
+                System.out.println();
+                frw.writeInFile(address+" ::: "+url,"./History/download_completed.txt", true);
+                frw.finalizer(address+" ::: "+url,"./History/failed_download.txt"); //saving failed download
             } catch (IOException ioExObj) {
                 System.out.println("Problem Occurred While Downloading The File= " + ioExObj.getMessage());
             } finally {

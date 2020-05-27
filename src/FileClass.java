@@ -12,7 +12,8 @@ public class FileClass {
         File file = new File(address);
         if (!file.exists()) {
             if (file.getParentFile() != null) {
-                System.out.println("Creating parent folder...");
+                if (!file.getParentFile().exists())
+                    System.out.println("Creating parent folder...");
                 file.getParentFile().mkdirs();
             }
             System.out.println("Creating file...");
