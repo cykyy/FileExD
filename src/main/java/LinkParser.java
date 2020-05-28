@@ -37,8 +37,6 @@ public class LinkParser {
                 }
             }
         }
-       // System.out.println(listOfLinks.get(2).get(0));
-       // System.out.println(linkList.get(1));
         return listOfLinks;
     }
 }

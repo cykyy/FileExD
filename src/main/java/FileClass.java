@@ -1,5 +1,7 @@
 import java.io.File;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class FileClass {
     private String address;
@@ -20,7 +22,28 @@ public class FileClass {
             file.createNewFile();
             return file.exists();
         } else
-            System.out.println("Hey hey! File already exists!");
+            System.out.print("File already exists! ");
         return !file.exists();
+    }
+
+    public boolean isLocalMatchesRemote(String localAddr, String remoteAddr) throws IOException {
+        File localFile = new File(localAddr);
+        if (localFile.exists()){
+            URL remoteUrl = new URL(remoteAddr);
+            HttpURLConnection connectRemote = (HttpURLConnection) remoteUrl.openConnection();
+            connectRemote.setRequestMethod("HEAD");
+            long remoteFileSize = connectRemote.getContentLengthLong();
+            String remoteFileSizeStr= Long.toString(remoteFileSize);
+
+            long localFileSize=localFile.length();
+            String localFileSizeStr=Long.toString(localFileSize);
+
+            if (localFileSizeStr.equals(remoteFileSizeStr)) {
+                return true;
+            }
+        connectRemote.disconnect();
+        }
+        System.out.println("Local file size do not matches with remote file size");
+        return false;
     }
 }

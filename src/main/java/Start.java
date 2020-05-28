@@ -121,8 +121,14 @@ public class Start {
                             if (checkFileExist) {
                                 downloadObj1.setAddress(addressSetter, (String) fileOnlyLinkOne.get(i).get(0));
                                 downloadObj1.downloadFileFromUrlUsingNio();
-                            } else
-                                System.out.println("File already attempted to download before, skipping!");
+                            } else {
+                                System.out.println("Checking file size...");
+                                if (!fileObj1.isLocalMatchesRemote(addressSetter,(String) fileOnlyLinkOne.get(i).get(0))){
+                                    downloadObj1.setAddress(addressSetter, (String) fileOnlyLinkOne.get(i).get(0));
+                                    downloadObj1.downloadFileFromUrlUsingNio();
+                                }else
+                                    System.out.println("File already downloaded, skipping!");
+                            }
                         }catch (NullPointerException | IOException setterAdd2){
                             setterAdd2.printStackTrace();
                         }
