@@ -9,7 +9,7 @@ public class FileReadWrite {
 
     public void writeInFile(String writeText, String writeFileName, boolean setAppend) {
         try {
-            file = new File(writeFileName);            //Declaring a file named named History.txt for creating.
+            file = new File(writeFileName);            //file name
             if (file.getParentFile() != null) {
                 if (!file.getParentFile().exists())
                     System.out.println("Creating log/history parent folder...");
