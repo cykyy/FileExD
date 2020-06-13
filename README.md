@@ -2,7 +2,7 @@
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
 A simple Java recursive file downloader from directory/index listing sites!
-FilExD will create folders/files based on the target site structure and download files from the target site to your specified local location. You won't find any difference in folder structure and file name after it completes the job.
+FileExD will create folders/files based on the target site structure and download files from the target site to your specified local location. You won't find any difference in folder structure and file name after it completes the job.
 Currently, supports H5ai and Nginx Fancyindex based sites. The tool can be upgraded to support more platforms.
 
 ## Build
