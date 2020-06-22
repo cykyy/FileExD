@@ -13,7 +13,7 @@ The project used Maven and Java 11. Clone the project and build to get started.
 - Nginx Fancyindex
 
 ## Test
-You can test the tool on this h5ai demo site, https://larsjung.de/h5ai/demo/ 
+You can test the tool on this h5ai demo site, https://larsjung.de/h5ai/demo/file%20preview/ 
 
 ## Updates
 - Added history feature
