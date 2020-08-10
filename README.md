@@ -6,7 +6,7 @@ FileExD will create folders/files based on the target site structure and downloa
 Currently, supports H5ai and Nginx Fancyindex based sites. The tool can be upgraded to support more platforms.
 
 ## Usage
-Download the latest [FileExD] jar version from releases section. cd to the downloaded folder and type java -jar FileExD-v1_1.jar (don't forget to change version according to downloaded)
+Download the latest [FileExD] jar version from releases section. cd to the downloaded folder and type 'java -jar FileExD-v1_1.jar' on cli (don't forget to change version according to downloaded). 
 
 ## Build
 The project used Maven and Java 11. Clone the project and build to get started.
