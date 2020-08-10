@@ -5,6 +5,9 @@ A simple Java recursive file downloader from directory/index listing sites!
 FileExD will create folders/files based on the target site structure and download files from the target site to your specified local location. You won't find any difference in folder structure and file name after it completes the job.
 Currently, supports H5ai and Nginx Fancyindex based sites. The tool can be upgraded to support more platforms.
 
+## Usage
+Download the latest [FileExD] jar version from releases section. cd to the downloaded folder and type java -jar FileExD-v1_1.jar (don't forget to change version according to downloaded)
+
 ## Build
 The project used Maven and Java 11. Clone the project and build to get started.
 
@@ -42,3 +45,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+[FileExD]: <https://github.com/cykyy/FileExD/releases/download/v1.1/FileExD-v1_1.jar>
+
